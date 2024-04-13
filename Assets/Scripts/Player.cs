@@ -30,7 +30,8 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
-           _playerRigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+            _playerRigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+            _playerAnimator.SetBool("IsJumped", true);
         }
     }
 
@@ -59,12 +60,8 @@ public class Player : MonoBehaviour
     private void FlipToDirection()
     {
         if (_horizontalInput < 0)
-        {
             transform.localScale = new Vector3(-1, 1, 1);
-        }
         else
-        {
             transform.localScale = new Vector3(1, 1, 1);
-        }
     }
 }
