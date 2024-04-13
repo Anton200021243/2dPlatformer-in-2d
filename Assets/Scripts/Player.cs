@@ -31,7 +31,6 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             _playerRigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
-            _playerAnimator.SetBool("IsJumped", true);
         }
     }
 
