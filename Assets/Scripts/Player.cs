@@ -7,15 +7,14 @@ public class Player : MonoBehaviour
     [SerializeField] Rigidbody2D _playerRigidbody;
     [SerializeField] private Animator _playerAnimator;
     [SerializeField] private LayerMask _groundLayer;
-    [SerializeField] private GameBehaviour _gameBehaviour;
+    [SerializeField] private Wallet _wallet;
 
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _jumpForce;
 
-    private float _coinCount = 0;
-    private float _maxCoins = 7;
     private float _horizontalInput;
     private float _rayDistance = 0.7f;
+
 
     private void Start()
     {
@@ -25,10 +24,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (_maxCoins == _coinCount)
-        {
-            _gameBehaviour.EndGame();
-        }
+
     }
 
     private void FixedUpdate()
@@ -41,9 +37,8 @@ public class Player : MonoBehaviour
     {
         if (collision.GetComponent<Coin>())
         {
-            _coinCount++;
+            _wallet.AddCoin();
             Debug.Log("Coin collected");
-            Debug.Log("Total coins: " + _coinCount);
             Destroy(collision.gameObject);
         }
     }
