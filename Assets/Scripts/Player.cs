@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -29,11 +28,11 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<Coin>())
+        if (collision.TryGetComponent<Coin>(out Coin coin))
         {
             _wallet.AddCoin();
             Debug.Log("Coin collected");
-            Destroy(collision.gameObject);
+            Destroy(coin.gameObject);
         }
     }
 

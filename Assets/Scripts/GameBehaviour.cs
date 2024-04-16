@@ -5,12 +5,12 @@ public class GameBehaviour : MonoBehaviour
 {
     private void OnEnable()
     {
-        Wallet.onAllCoinCollected += EndGame;
+        Wallet.OnAllCoinCollected += EndGame;
     }
 
     private void OnDisable()
     {
-        Wallet.onAllCoinCollected -= EndGame;
+        Wallet.OnAllCoinCollected -= EndGame;
     }
 
     public void EndGame()

@@ -1,16 +1,14 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Wallet : MonoBehaviour
 {
-    public static Action onAllCoinCollected;
+    public static Action OnAllCoinCollected;
 
     [SerializeField] private Transform _coin;
 
     private int _coinCount = 0;
-    private int _maxCoin = 7;
+    private int _maxCoin;
 
     private void Start()
     {
@@ -23,7 +21,7 @@ public class Wallet : MonoBehaviour
 
         if (_coinCount == _maxCoin)
         {
-            onAllCoinCollected?.Invoke();
+            OnAllCoinCollected?.Invoke();
         }
     }
 }
