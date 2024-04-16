@@ -15,16 +15,10 @@ public class Player : MonoBehaviour
     private float _horizontalInput;
     private float _rayDistance = 0.7f;
 
-
     private void Start()
     {
         _playerRigidbody = GetComponent<Rigidbody2D>();
         _playerAnimator = GetComponent<Animator>();
-    }
-
-    private void Update()
-    {
-
     }
 
     private void FixedUpdate()
