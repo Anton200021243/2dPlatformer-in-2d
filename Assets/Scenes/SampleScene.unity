@@ -4922,6 +4922,10 @@ PrefabInstance:
       propertyPath: _gameBehaviour
       value: 
       objectReference: {fileID: 1345101068}
+    - target: {fileID: 6587681732137798171, guid: 5916a6c4f25e1ba419d89f75a0b3deda, type: 3}
+      propertyPath: _coin
+      value: 
+      objectReference: {fileID: 340729325}
     - target: {fileID: 6626098520462740519, guid: 5916a6c4f25e1ba419d89f75a0b3deda, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.62
