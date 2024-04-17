@@ -3,19 +3,27 @@ using UnityEngine.SceneManagement;
 
 public class GameBehaviour : MonoBehaviour
 {
-    [SerializeField] private CoinCollector _coinCollector;
+    [SerializeField] private Transform _coin;
 
-    private void OnEnable()
+    private int _coinCount = 0;
+    private int _maxCoinCount;
+
+    private void Start()
     {
-        _coinCollector.OnAllCoinCollected += EndGame;
+        _maxCoinCount = _coin.childCount;
     }
 
-    private void OnDisable()
+    public void AddCoin()
     {
-        _coinCollector.OnAllCoinCollected -= EndGame;
+        _coinCount++;
+
+        if (_coinCount == _maxCoinCount)
+        {
+            EndGame();
+        }
     }
 
-    public void EndGame()
+    private void EndGame()
     {
         SceneManager.LoadScene(0);
     }

@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1452034410863763663, guid: 0fae483b3da9eb24d9ac0949e90d63dd, type: 3}
+      propertyPath: _gameBehaviour
+      value: 
+      objectReference: {fileID: 1345101068}
     - target: {fileID: 4879691122982003201, guid: 0fae483b3da9eb24d9ac0949e90d63dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.953835
@@ -197,6 +201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1452034410863763663, guid: 0fae483b3da9eb24d9ac0949e90d63dd, type: 3}
+      propertyPath: _gameBehaviour
+      value: 
+      objectReference: {fileID: 1345101068}
     - target: {fileID: 4879691122982003201, guid: 0fae483b3da9eb24d9ac0949e90d63dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.104269
@@ -537,6 +545,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1452034410863763663, guid: 0fae483b3da9eb24d9ac0949e90d63dd, type: 3}
+      propertyPath: _gameBehaviour
+      value: 
+      objectReference: {fileID: 1345101068}
     - target: {fileID: 4879691122982003201, guid: 0fae483b3da9eb24d9ac0949e90d63dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.885874
@@ -592,6 +604,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4879691122982003201, guid: 0fae483b3da9eb24d9ac0949e90d63dd, type: 3}
   m_PrefabInstance: {fileID: 1345944180}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &803449599 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1991843533063134815, guid: c3f01e987b642cf4fa3e4321cd9b6986, type: 3}
+  m_PrefabInstance: {fileID: 2040345035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &803449606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803449599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3421001a9ae2fb4aadd632faf2e4b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _patrolPoint: {fileID: 1679213709}
+  _enemyAnimator: {fileID: 0}
+  _speed: 2
 --- !u!1 &854858695
 GameObject:
   m_ObjectHideFlags: 0
@@ -4036,7 +4068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867d85332edb8c8439bcc1bf2e654a4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coinCollector: {fileID: 0}
+  _coin: {fileID: 340729325}
 --- !u!4 &1345101069
 Transform:
   m_ObjectHideFlags: 0
@@ -4064,6 +4096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1452034410863763663, guid: 0fae483b3da9eb24d9ac0949e90d63dd, type: 3}
+      propertyPath: _gameBehaviour
+      value: 
+      objectReference: {fileID: 1345101068}
     - target: {fileID: 4879691122982003201, guid: 0fae483b3da9eb24d9ac0949e90d63dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.719895
@@ -4378,6 +4414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1452034410863763663, guid: 0fae483b3da9eb24d9ac0949e90d63dd, type: 3}
+      propertyPath: _gameBehaviour
+      value: 
+      objectReference: {fileID: 1345101068}
     - target: {fileID: 4879691122982003201, guid: 0fae483b3da9eb24d9ac0949e90d63dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.6689582
@@ -4552,6 +4592,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1452034410863763663, guid: 0fae483b3da9eb24d9ac0949e90d63dd, type: 3}
+      propertyPath: _gameBehaviour
+      value: 
+      objectReference: {fileID: 1345101068}
     - target: {fileID: 4879691122982003201, guid: 0fae483b3da9eb24d9ac0949e90d63dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.6639447
@@ -4837,8 +4881,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1991843533063134815, guid: c3f01e987b642cf4fa3e4321cd9b6986, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 803449606}
   m_SourcePrefab: {fileID: 100100000, guid: c3f01e987b642cf4fa3e4321cd9b6986, type: 3}
+--- !u!1 &2040859212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1991843533063134815, guid: c3f01e987b642cf4fa3e4321cd9b6986, type: 3}
+  m_PrefabInstance: {fileID: 6828962942307006825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2040859219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040859212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3421001a9ae2fb4aadd632faf2e4b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _patrolPoint: {fileID: 462074186}
+  _enemyAnimator: {fileID: 0}
+  _speed: 2
 --- !u!1001 &1111696844551131077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4851,6 +4918,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin
       objectReference: {fileID: 0}
+    - target: {fileID: 1452034410863763663, guid: 0fae483b3da9eb24d9ac0949e90d63dd, type: 3}
+      propertyPath: _gameBehaviour
+      value: 
+      objectReference: {fileID: 1345101068}
     - target: {fileID: 4879691122982003201, guid: 0fae483b3da9eb24d9ac0949e90d63dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.27
@@ -5032,7 +5103,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1991843533063134815, guid: c3f01e987b642cf4fa3e4321cd9b6986, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2040859219}
   m_SourcePrefab: {fileID: 100100000, guid: c3f01e987b642cf4fa3e4321cd9b6986, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
