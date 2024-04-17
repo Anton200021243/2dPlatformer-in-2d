@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameBehaviour : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     [SerializeField] private Transform _coin;
 

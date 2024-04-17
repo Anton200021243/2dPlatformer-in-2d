@@ -11,7 +11,7 @@ public class EnemyPatrol : MonoBehaviour
     private int _indexOfPoint = 0;
     private float _distanceToPoint = 0.03f;
 
-    void Start()
+    private void Start()
     {
         _patrolPoints = new Transform[_patrolPoint.childCount];
 

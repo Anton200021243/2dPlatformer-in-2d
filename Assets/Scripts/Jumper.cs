@@ -1,6 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(HandleInput))]
 public class Jumper : MonoBehaviour
 {
     [SerializeField] private LayerMask _groundLayer;

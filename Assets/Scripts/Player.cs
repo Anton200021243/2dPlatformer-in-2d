@@ -1,5 +1,7 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Jumper))]
+[RequireComponent(typeof(Mover))]
 public class Player : MonoBehaviour
 {
     [SerializeField] private Jumper _jumper;

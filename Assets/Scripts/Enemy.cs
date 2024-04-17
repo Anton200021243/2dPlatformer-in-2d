@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(EnemyPatrol))]
 public class Enemy : MonoBehaviour
 {
     private EnemyPatrol _enemyPatrol;
