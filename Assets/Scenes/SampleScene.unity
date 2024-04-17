@@ -436,17 +436,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 462074186}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &551228207 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6587681732137798171, guid: 5916a6c4f25e1ba419d89f75a0b3deda, type: 3}
-  m_PrefabInstance: {fileID: 5803789971197436909}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eac60a5c355fa114b9cd94e0d15f5101, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &621682961 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4879691122982003201, guid: 0fae483b3da9eb24d9ac0949e90d63dd, type: 3}
@@ -4047,6 +4036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867d85332edb8c8439bcc1bf2e654a4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _coinCollector: {fileID: 0}
 --- !u!4 &1345101069
 Transform:
   m_ObjectHideFlags: 0
@@ -4914,18 +4904,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3973869333364067382, guid: 5916a6c4f25e1ba419d89f75a0b3deda, type: 3}
-      propertyPath: _wallet
-      value: 
-      objectReference: {fileID: 551228207}
-    - target: {fileID: 3973869333364067382, guid: 5916a6c4f25e1ba419d89f75a0b3deda, type: 3}
-      propertyPath: _gameBehaviour
-      value: 
-      objectReference: {fileID: 1345101068}
-    - target: {fileID: 6587681732137798171, guid: 5916a6c4f25e1ba419d89f75a0b3deda, type: 3}
-      propertyPath: _coin
-      value: 
-      objectReference: {fileID: 340729325}
     - target: {fileID: 6626098520462740519, guid: 5916a6c4f25e1ba419d89f75a0b3deda, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.62
@@ -4966,9 +4944,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6688127512724669790, guid: 5916a6c4f25e1ba419d89f75a0b3deda, type: 3}
+      propertyPath: _wallet
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7630495966693910011, guid: 5916a6c4f25e1ba419d89f75a0b3deda, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7909005871184693463, guid: 5916a6c4f25e1ba419d89f75a0b3deda, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

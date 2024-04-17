@@ -3,19 +3,20 @@ using UnityEngine.SceneManagement;
 
 public class GameBehaviour : MonoBehaviour
 {
+    [SerializeField] private CoinCollector _coinCollector;
+
     private void OnEnable()
     {
-        Wallet.OnAllCoinCollected += EndGame;
+        _coinCollector.OnAllCoinCollected += EndGame;
     }
 
     private void OnDisable()
     {
-        Wallet.OnAllCoinCollected -= EndGame;
+        _coinCollector.OnAllCoinCollected -= EndGame;
     }
 
     public void EndGame()
     {
-        Debug.Log("You are collected all coins");
         SceneManager.LoadScene(0);
     }
 }

@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
         _enemyAnimator.SetFloat("Run", 1);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         Patrol();
     }
@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
 
         if (Vector2.Distance(transform.position, _patrolPoints[_indexOfPoint].position) < _distanceToPoint)
         {
-            _indexOfPoint = (_indexOfPoint + 1) % _patrolPoints.Length;
+            _indexOfPoint = (++_indexOfPoint) % _patrolPoints.Length;
         }
     }
 }
