@@ -5,7 +5,7 @@ public class Enemy : MonoBehaviour
 {
     private EnemyPatrol _enemyPatrol;
 
-    private void Start()
+    private void Awake()
     {
         _enemyPatrol = GetComponent<EnemyPatrol>();
     }

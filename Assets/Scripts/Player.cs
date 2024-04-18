@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Jumper _jumper;
     [SerializeField] private Mover _mover;
 
-    private void Start()
+    private void Awake()
     {
         _jumper = GetComponent<Jumper>();
         _mover = GetComponent<Mover>();

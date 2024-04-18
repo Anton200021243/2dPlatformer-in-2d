@@ -12,7 +12,7 @@ public class Mover : MonoBehaviour
     private float _playerRotationFlip = 180;
     private float _horizontalInput;
 
-    private void Start()
+    private void Awake()
     {
         _animator = GetComponent<Animator>();
         _handleInput = GetComponent<HandleInput>();
@@ -38,6 +38,6 @@ public class Mover : MonoBehaviour
         if (_horizontalInput < 0)
             transform.rotation = Quaternion.Euler(0, _playerRotationFlip, 0);
         else
-            transform.rotation = Quaternion.Euler(Vector3.zero);
+            transform.rotation = Quaternion.identity;
     }
 }

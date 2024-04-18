@@ -13,7 +13,7 @@ public class Jumper : MonoBehaviour
     private float _rayDistance = 0.7f;
     private bool _isSpaceClick = false;
 
-    private void Start()
+    private void Awake()
     {
         _playerRigidbody = GetComponent<Rigidbody2D>();
         _handleInput = GetComponent<HandleInput>();

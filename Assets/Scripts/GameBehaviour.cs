@@ -1,23 +1,23 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameBehaviour : MonoBehaviour
 {
     [SerializeField] private Transform _coin;
 
-    private int _coinCount = 0;
-    private int _maxCoinCount;
+    private int _score = 0;
+    private int _maxScore;
 
     private void Start()
     {
-        _maxCoinCount = _coin.childCount;
+        _maxScore = _coin.childCount;
     }
 
     public void AddCoin()
     {
-        _coinCount++;
+        _score++;
 
-        if (_coinCount == _maxCoinCount)
+        if (_score == _maxScore)
         {
             EndGame();
         }
