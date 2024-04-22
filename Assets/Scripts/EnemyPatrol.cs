@@ -21,7 +21,7 @@ public class EnemyPatrol : MonoBehaviour
         }
 
         _enemyAnimator = GetComponent<Animator>();
-        _enemyAnimator.SetFloat(PlayerAnimatorData.Params.Run, _speed);
+        _enemyAnimator.SetFloat(PlayerAnimatorData.Run, _speed);
     }
 
     public void Patrol()

@@ -3,29 +3,23 @@ using UnityEngine.SceneManagement;
 
 public class GameBehaviour : MonoBehaviour
 {
-    [SerializeField] private Transform _coin;
     [SerializeField] private Player _player;
 
-    private PlayerHealth _playerHealth;
-
-    private int _score = 0;
-    private int _maxScore;
+    private PlayerHealth _playerHealth;   
+    private CoinCollector _playerCoinCollector;   
 
     private void Start()
     {
-        _maxScore = _coin.childCount;
         _playerHealth = _player.GetComponent<PlayerHealth>();
+        _playerCoinCollector = _player.GetComponent<CoinCollector>();
         _playerHealth.OnPlayerDeath += EndGame;
+        _playerCoinCollector.OnAllCoinCollected += EndGame;
     }
 
-    public void AddCoin()
+    private void OnDisable()
     {
-        _score++;
-
-        if (_score == _maxScore)
-        {
-            EndGame();
-        }
+        _playerHealth.OnPlayerDeath -= EndGame;
+        _playerCoinCollector.OnAllCoinCollected -= EndGame;
     }
 
     private void EndGame()

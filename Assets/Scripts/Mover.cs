@@ -30,7 +30,7 @@ public class Mover : MonoBehaviour
         FlipToDirection();
 
         transform.Translate(direction * Time.deltaTime);
-        _animator.SetFloat(PlayerAnimatorData.Params.HorizontalMove, Mathf.Abs(_horizontalInput));
+        _animator.SetFloat(PlayerAnimatorData.HorizontalMove, Mathf.Abs(_horizontalInput));
     }
 
     private void FlipToDirection()
