@@ -4,10 +4,21 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public event Action OnPlayerDeath;
+    public event Action OnHealthChange;
 
-    private int _health = 2;
+    private float _maxHealth = 3;
+    private float _health;
+    private float _healthChange = 1;
 
-    public int Health => _health;
+    public float Health => _health;
+    public float MaxHealth => _maxHealth;
+    public float HealthChange => _healthChange;
+
+    private void Start()
+    {
+        _health = _maxHealth;
+        OnHealthChange?.Invoke();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -15,27 +26,30 @@ public class PlayerHealth : MonoBehaviour
         {
             Damage();
             Destroy(enemy.gameObject);
-            Debug.Log(Health + " Health");
         }
 
         if (collision.gameObject.TryGetComponent<AidKit>(out AidKit aidKit))
         {
             AddHealth();
             Destroy(aidKit.gameObject);
-            Debug.Log(Health + " Health");
         }
     }
 
     public void Damage()
     {
-        if (_health > 1) 
-            _health--;
+        if (_health > 1)
+            _health -= HealthChange;
         else
             OnPlayerDeath?.Invoke();
+
+        OnHealthChange?.Invoke();
     }
 
     public void AddHealth()
     {
-        _health++;
+        if (_health < _maxHealth)
+            _health += HealthChange;
+
+        OnHealthChange?.Invoke();
     }
 }
