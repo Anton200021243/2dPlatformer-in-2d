@@ -9,10 +9,17 @@ public class HealthUI : MonoBehaviour
 
     private PlayerHealth _playerHealth;
     private float _speedChange = 3;
+    private Quaternion _rotation;
 
     private void Awake()
     {
-        _playerHealth = _player.GetComponent<PlayerHealth>();        
+        _playerHealth = _player.GetComponent<PlayerHealth>();
+        _rotation = Quaternion.identity;
+    }
+
+    private void Update()
+    {
+        transform.rotation = _rotation;
     }
 
     private void OnEnable()
