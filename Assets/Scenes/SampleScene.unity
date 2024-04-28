@@ -4366,6 +4366,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4879691122982003201, guid: 0fae483b3da9eb24d9ac0949e90d63dd, type: 3}
   m_PrefabInstance: {fileID: 1800703879}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1597349854 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6992330096653076690, guid: c3f01e987b642cf4fa3e4321cd9b6986, type: 3}
+  m_PrefabInstance: {fileID: 2040345035}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1651548897
 GameObject:
   m_ObjectHideFlags: 0
@@ -4930,6 +4941,10 @@ PrefabInstance:
       propertyPath: _patrolPoint
       value: 
       objectReference: {fileID: 1679213709}
+    - target: {fileID: 8053784501887866743, guid: c3f01e987b642cf4fa3e4321cd9b6986, type: 3}
+      propertyPath: _smoothBarHP
+      value: 
+      objectReference: {fileID: 1597349854}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5223,6 +5238,10 @@ PrefabInstance:
       propertyPath: _patrolPoint
       value: 
       objectReference: {fileID: 462074186}
+    - target: {fileID: 5278550241351582993, guid: c3f01e987b642cf4fa3e4321cd9b6986, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
