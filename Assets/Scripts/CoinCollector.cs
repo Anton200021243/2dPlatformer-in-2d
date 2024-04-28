@@ -7,7 +7,7 @@ public class CoinCollector : MonoBehaviour
 {
     [SerializeField] private Transform _coin;
 
-    public event Action OnAllCoinCollected;
+    public event Action AllCoinCollected;
 
     private int _score = 0;
     private int _maxScore;
@@ -32,7 +32,7 @@ public class CoinCollector : MonoBehaviour
 
         if (_score == _maxScore)
         {
-            OnAllCoinCollected?.Invoke();
+            AllCoinCollected?.Invoke();
         }
     }
 }

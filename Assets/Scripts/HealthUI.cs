@@ -4,16 +4,16 @@ using UnityEngine.UI;
 
 public class HealthUI : MonoBehaviour
 {
-    [SerializeField] private Player _player;
+    [SerializeField] private Transform _object;
     [SerializeField] private Image _smoothBarHP;
 
-    private PlayerHealth _playerHealth;
+    private Health _health;
     private float _speedChange = 3;
     private Quaternion _rotation;
 
     private void Awake()
     {
-        _playerHealth = _player.GetComponent<PlayerHealth>();
+        _health = _object.GetComponent<Health>();
         _rotation = Quaternion.identity;
     }
 
@@ -24,17 +24,17 @@ public class HealthUI : MonoBehaviour
 
     private void OnEnable()
     {
-        _playerHealth.OnHealthChange += UpdateHealth;
+        _health.HealthChanged += UpdateHealth;
     }
 
     private void OnDisable()
     {
-        _playerHealth.OnHealthChange -= UpdateHealth;
+        _health.HealthChanged -= UpdateHealth;
     }
 
     public void UpdateHealth()
     {
-        StartCoroutine(ChangeHealth(_playerHealth.Health / _playerHealth.MaxHealth));
+        StartCoroutine(ChangeHealth(_health.HealthPoints / _health.MaxHealth));
     }
 
     private IEnumerator ChangeHealth(float targetHealth)

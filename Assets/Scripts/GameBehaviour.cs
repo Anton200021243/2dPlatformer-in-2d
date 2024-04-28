@@ -5,21 +5,25 @@ public class GameBehaviour : MonoBehaviour
 {
     [SerializeField] private Player _player;
 
-    private PlayerHealth _playerHealth;   
+    private Health _playerHealth; 
     private CoinCollector _playerCoinCollector;   
 
-    private void Start()
+    private void Awake()
     {
-        _playerHealth = _player.GetComponent<PlayerHealth>();
-        _playerCoinCollector = _player.GetComponent<CoinCollector>();
-        _playerHealth.OnPlayerDeath += EndGame;
-        _playerCoinCollector.OnAllCoinCollected += EndGame;
+        _playerHealth = _player.GetComponent<Health>();
+        _playerCoinCollector = _player.GetComponent<CoinCollector>();      
+        _playerCoinCollector.AllCoinCollected += EndGame;
+    }
+
+    private void OnEnable()
+    {
+        _playerHealth.PlayerDead += EndGame;
     }
 
     private void OnDisable()
     {
-        _playerHealth.OnPlayerDeath -= EndGame;
-        _playerCoinCollector.OnAllCoinCollected -= EndGame;
+        _playerHealth.PlayerDead -= EndGame;
+        _playerCoinCollector.AllCoinCollected -= EndGame;
     }
 
     private void EndGame()

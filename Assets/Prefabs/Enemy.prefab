@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 793019868808003795}
   - component: {fileID: 4387669645184060205}
   - component: {fileID: 285527434961771981}
-  - component: {fileID: 5297100240194916059}
+  - component: {fileID: 6143392575979198825}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -210,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 1991843533063134815}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.9705553, y: 4.7854357, z: 0}
+  m_LocalPosition: {x: 0.43, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -393,7 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 3
   _target: {fileID: 0}
---- !u!114 &5297100240194916059
+--- !u!114 &6143392575979198825
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -402,9 +402,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1991843533063134815}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 085cd18a6a96f534a846c0ae7f26f4e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 18b18ba7f86a16e4d98a260bf1d061f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxHealth: 2
 --- !u!1 &2285568830249631199
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,7 +415,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 692831077891748122}
-  - component: {fileID: 8053784501887866743}
+  - component: {fileID: 4390774200176089826}
   m_Layer: 0
   m_Name: HealthBar
   m_TagString: Untagged
@@ -443,7 +444,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0000003380701, y: 0.000000020989}
   m_SizeDelta: {x: 0.7769, y: 0.3577}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8053784501887866743
+--- !u!114 &4390774200176089826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -452,10 +453,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2285568830249631199}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8e3db8a9c6ff2041bd1717f0549661f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5af212d06336a4d4794152240d3c79a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 8988974757179637545}
+  _object: {fileID: 2890956917743636772}
   _smoothBarHP: {fileID: 6992330096653076690}
 --- !u!1 &5706068336463284748
 GameObject:
