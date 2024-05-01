@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
 
     [SerializeField] private float _maxHealth;
 
-    private float _health;
+    [SerializeField] private float _health;
     private float _healthChange = 1;
 
     public float HealthPoints => _health;
@@ -51,7 +51,7 @@ public class Health : MonoBehaviour
 
     public void EnemyDamage(float damage)
     {
-        if (_health > 1)
+        if (_health - damage > 0)
             _health -= damage;
         else
             Destroy(gameObject);

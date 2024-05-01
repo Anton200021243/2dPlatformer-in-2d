@@ -92,8 +92,9 @@ GameObject:
   - component: {fileID: 657014527572969210}
   - component: {fileID: 4075532484241062679}
   - component: {fileID: 8205412164587145204}
-  - component: {fileID: 8661949652819720450}
   - component: {fileID: 8980544169417369680}
+  - component: {fileID: 4425136371058532148}
+  - component: {fileID: 2381423905156387453}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -307,18 +308,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5bb29699611734e8e7a55617f22836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8661949652819720450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5905612398279768659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91c15baf80f33fc4d9db4efbb9c85e47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8980544169417369680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +321,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coin: {fileID: 0}
+--- !u!114 &4425136371058532148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5905612398279768659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18b18ba7f86a16e4d98a260bf1d061f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 3
+--- !u!114 &2381423905156387453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5905612398279768659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c9ef6bda8d65b24f9f2397a1ed202d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7646213875771969074
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,10 +412,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 87b95def0e9d86149a1e239f534dd5f6, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -420,8 +434,8 @@ GameObject:
   - component: {fileID: 991648716909198317}
   - component: {fileID: 6198916438912481763}
   m_Layer: 0
-  m_Name: Canvas
-  m_TagString: Untagged
+  m_Name: PlayerCanvas
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -559,5 +573,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af212d06336a4d4794152240d3c79a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 2885323905410188402}
+  _object: {fileID: 1930727805273211029}
   _smoothBarHP: {fileID: 3948346230112008124}
