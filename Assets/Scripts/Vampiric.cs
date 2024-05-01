@@ -8,7 +8,11 @@ public class Vampiric : MonoBehaviour
     private Health _playerHealth;
 
     private float _vampiricHealth = 0.2f;
-    private float _vampiricRadius = 100f;
+    private float _vampiricRadius = 6f;
+    private float _vampiricTick = 1;
+    private float _vampiricCouldown = 15f;
+
+    private bool isCouldown = false;
 
     private void Awake()
     {
@@ -17,7 +21,7 @@ public class Vampiric : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && isCouldown == false)
         {
             UseSpell();
         }
@@ -33,14 +37,30 @@ public class Vampiric : MonoBehaviour
         }
     }
 
+    private IEnumerator VampireCouldown()
+    {
+        isCouldown = true;
+        yield return new WaitForSeconds(_vampiricCouldown);
+        isCouldown = false;
+    }
+
     private IEnumerator Vampire(Health enemyHealth)
     {
-        yield return new WaitForSeconds(2);
+        int counterTicks = 0;
+        int castTime = 6;
 
-        while (true)
+        StartCoroutine(VampireCouldown());
+
+        while (counterTicks != castTime)
         {
-            enemyHealth.EnemyDamage(_vampiricHealth);
-            _playerHealth.AddHealth(_vampiricHealth);
+            if (enemyHealth != null)
+            {
+                enemyHealth.EnemyDamage(_vampiricHealth);
+                _playerHealth.AddHealth(_vampiricHealth);
+            }
+
+            counterTicks++;
+            yield return new WaitForSeconds(_vampiricTick);
         }
     }
 }
