@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -7,10 +8,14 @@ public class Vampiric : MonoBehaviour
 
     private Health _playerHealth;
 
+    public event Action UsedSpell;
+
     private float _vampiricHealth = 0.2f;
     private float _vampiricRadius = 6f;
     private float _vampiricTick = 1;
     private float _vampiricCouldown = 15f;
+
+    public float VampiricCouldown => _vampiricCouldown;
 
     private bool isCouldown = false;
 
@@ -40,6 +45,7 @@ public class Vampiric : MonoBehaviour
     private IEnumerator VampireCouldown()
     {
         isCouldown = true;
+        UsedSpell?.Invoke();
         yield return new WaitForSeconds(_vampiricCouldown);
         isCouldown = false;
     }
